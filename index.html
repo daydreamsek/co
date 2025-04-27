@@ -40,28 +40,52 @@
     main {
       padding: 20px;
     }
-    .card {
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+    .left, .right {
       background: white;
       padding: 20px;
-      margin-bottom: 10px;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    .search-result, .main-content {
-      display: none;
+    .left {
+      flex: 1;
+    }
+    .right {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      margin-bottom: 20px;
     }
     .card h3 {
       margin: 0 0 5px;
     }
-    .today-image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
+    .today-title {
+      align-self: flex-start;
+      font-weight: bold;
+      margin-bottom: 10px;
+      background-color: #e6ecf5;
+      padding: 5px 10px;
+      border-radius: 10px;
+      color: #0050b3;
     }
     .today-image img {
       max-width: 300px;
       border-radius: 8px;
+    }
+    .today-desc {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #555;
+      text-align: center;
+    }
+    .search-result {
+      display: none;
     }
   </style>
   <script>
@@ -88,25 +112,35 @@
 </header>
 
 <main>
-  <div id="mainContent" class="main-content">
-    <div class="card">
-      <h3>사랑방</h3>
-      <p>다른 분들과 의견을 교환해봐요!</p>
-    </div>
-    <div class="card">
-      <h3>질문방</h3>
-      <p>지침으로 해소되지 않는 의문을 풀어봐요!</p>
-    </div>
-    <div class="card">
-      <h3>사용자 모임</h3>
-      <p>커뮤니티 포털에 방문해 보세요!</p>
-    </div>
-    <div class="card">
-      <h3>정책과 지침</h3>
-      <p>편집하시기 전에 한번 읽어주세요!</p>
-    </div>
-    <div class="today-image">
-      <img src="백일몽%20사이트%20메인%20화면.png" alt="오늘의 그림">
+  <div id="mainContent">
+    <div class="container">
+      <div class="left">
+        <div class="card">
+          <h3>사랑방</h3>
+          <p>다른 분들과 의견을 교환해봐요!</p>
+        </div>
+        <div class="card">
+          <h3>질문방</h3>
+          <p>지침으로 해소되지 않는 의문을 풀어봐요!</p>
+        </div>
+        <div class="card">
+          <h3>사용자 모임</h3>
+          <p>커뮤니티 포털에 방문해 보세요!</p>
+        </div>
+        <div class="card">
+          <h3>정책과 지침</h3>
+          <p>편집하시기 전에 한번 읽어주세요!</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="today-title">오늘의 그림</div>
+        <div class="today-image">
+          <img src="오늘의%20그림%200427%201.png" alt="오늘의 그림">
+        </div>
+        <div class="today-desc">
+          J3 경비 반장님의 그림입니다. 춤을 추는 본인을 표현한 것으로 보이며...
+        </div>
+      </div>
     </div>
   </div>
 
