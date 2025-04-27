@@ -18,7 +18,7 @@
       padding: 10px 20px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    header img {
+    header a img {
       height: 40px;
     }
     header input[type="text"] {
@@ -207,7 +207,9 @@
 <body>
 
 <header>
-  <img src="백일몽%20로고%202.png" alt="Daydream Corporation Logo">
+  <a href="index.html">
+    <img src="백일몽%20로고%202.png" alt="Daydream Corporation Logo">
+  </a>
   <input type="text" id="searchInput" placeholder="검색" onkeydown="if (event.keyCode === 13) search()">
   <button onclick="search()">검색</button>
 </header>
