@@ -52,6 +52,9 @@
     }
     .left {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
     .right {
       flex: 2;
@@ -61,8 +64,12 @@
       position: relative;
     }
     .card {
-      margin-bottom: 20px;
-      cursor: pointer;
+      padding: 15px;
+      text-decoration: none;
+      color: inherit;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .card:hover {
       background-color: #f0f0f0;
@@ -194,19 +201,6 @@
       document.getElementById('mainContent').style.display = 'block';
       document.getElementById('searchResult').style.display = 'none';
       showSlide(0);
-
-      document.getElementById('card-love').onclick = function() {
-        window.location.href = 'https://www.band.us/band/98368341';
-      }
-      document.getElementById('card-question').onclick = function() {
-        window.location.href = 'https://asked.kr/gskr_intranet';
-      }
-      document.getElementById('card-meeting').onclick = function() {
-        window.location.href = 'https://band.us/band/98368341/post/3';
-      }
-      document.getElementById('card-policy').onclick = function() {
-        window.location.href = 'https://band.us/band/98368341/post/1';
-      }
     }
   </script>
 </head>
@@ -222,22 +216,22 @@
   <div id="mainContent">
     <div class="container">
       <div class="left">
-        <div class="card" id="card-love">
+        <a class="card" href="https://www.band.us/band/98368341" target="_blank">
           <h3>사랑방</h3>
           <p>다른 분들과 의견을 교환해봐요!</p>
-        </div>
-        <div class="card" id="card-question">
+        </a>
+        <a class="card" href="https://asked.kr/gskr_intranet" target="_blank">
           <h3>질문방</h3>
           <p>지침으로 해소되지 않는 의문을 풀어봐요!</p>
-        </div>
-        <div class="card" id="card-meeting">
+        </a>
+        <a class="card" href="https://band.us/band/98368341/post/3" target="_blank">
           <h3>사용자 모임</h3>
           <p>커뮤니티 포털에 방문해 보세요!</p>
-        </div>
-        <div class="card" id="card-policy">
+        </a>
+        <a class="card" href="https://band.us/band/98368341/post/1" target="_blank">
           <h3>정책과 지침</h3>
           <p>편집하시기 전에 한번 읽어주세요!</p>
-        </div>
+        </a>
       </div>
       <div class="right">
         <div class="today-title">오늘의 그림</div>
