@@ -62,6 +62,10 @@
     }
     .card {
       margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .card:hover {
+      background-color: #f0f0f0;
     }
     .card h3 {
       margin: 0 0 5px;
@@ -149,7 +153,7 @@
       "J3 경비 반장님의 그림입니다. 춤을 추는 본인을 표현한 것으로 보이며...",
       "진나솔 대리님의 미감이 돋보이는 그림. 나비를 표현한 예술 작품으로...",
       "J3 경비 반장님은 오늘도 도넛을 먹는다. 자화상으로 보이며...",
-      "브라운(쇼 비즈니스 맙소사!)의 [친구와의 멋진 하루!] 번쩍번쩍번쩍번쩍번쩍 안녕하십니까이밤의즐거움매일만나는새로운얼굴그리고친근한당신의사회자!안녕하십니까여긴심야토크...",
+      "브라운(쇼 비즈니스 맙소사!)의 [친구와의 멋진 하루!] 번쩍번쩍 안녕하십니까...",
       "J3 경비 반장님! 아무리 그래도 땅에 떨어진 도넛을 드시면 안 돼요...",
       "백사헌 사원님의 미래가 한눈에! 이렇게 쉽게 표현할 수 있는 미래도 많지 않...",
       "최강 현무 1 팀! 절대 초등학생의 그림이 아니에요! 무려 청동 요원의 뛰어난 그림 실...",
@@ -190,6 +194,19 @@
       document.getElementById('mainContent').style.display = 'block';
       document.getElementById('searchResult').style.display = 'none';
       showSlide(0);
+
+      document.getElementById('card-love').onclick = function() {
+        window.location.href = 'https://www.band.us/band/98368341';
+      }
+      document.getElementById('card-question').onclick = function() {
+        window.location.href = 'https://asked.kr/gskr_intranet';
+      }
+      document.getElementById('card-meeting').onclick = function() {
+        window.location.href = 'https://band.us/band/98368341/post/3';
+      }
+      document.getElementById('card-policy').onclick = function() {
+        window.location.href = 'https://band.us/band/98368341/post/1';
+      }
     }
   </script>
 </head>
@@ -205,19 +222,19 @@
   <div id="mainContent">
     <div class="container">
       <div class="left">
-        <div class="card">
+        <div class="card" id="card-love">
           <h3>사랑방</h3>
           <p>다른 분들과 의견을 교환해봐요!</p>
         </div>
-        <div class="card">
+        <div class="card" id="card-question">
           <h3>질문방</h3>
           <p>지침으로 해소되지 않는 의문을 풀어봐요!</p>
         </div>
-        <div class="card">
+        <div class="card" id="card-meeting">
           <h3>사용자 모임</h3>
           <p>커뮤니티 포털에 방문해 보세요!</p>
         </div>
-        <div class="card">
+        <div class="card" id="card-policy">
           <h3>정책과 지침</h3>
           <p>편집하시기 전에 한번 읽어주세요!</p>
         </div>
