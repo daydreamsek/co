@@ -135,7 +135,7 @@
 
 <header>
   <img src="백일몽%20로고%202.png" alt="Daydream Corporation Logo">
-  <input type="text" id="searchInput" placeholder="검색">
+  <input type="text" id="searchInput" placeholder="검색" onkeydown="if (event.keyCode === 13) search()">
   <button onclick="search()">검색</button>
 </header>
 
